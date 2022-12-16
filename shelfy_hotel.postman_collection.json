@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "650cf0f8-ab1b-4fbc-b7fe-54f361eb1410",
+		"name": "shelfy_hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MJBq1KRC2OPAOhydKaABt0qojY0763SC",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"first_name\": \"Федора\",\r\n\"last_name\": \"Блюдичкина\",\r\n\"gender\":\"Ж\",\r\n\"birth_day\":\"1984-09-01\",\r\n\"phone\": \"+7(952)666-48-35\",\r\n\"user_pic\":\"\",\r\n\"e_mail\":\"fedor@gmail.com\",\r\n\"login\":\"fedorblud01\",\r\n\"password\":\"fed123\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/register",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"login\":\"fedorblud01\",\r\n\"password\":\"fed123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/login",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8yCNJcpWQxFYDAUvLx4cnCMGTh0KMXj_",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/user",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4UdN3dyY_LEulVk9MQwlVEoxaK0i9rrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/delete",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add hotel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yOvG7smseyJG3Xfz1p71urne38fH_wM6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Гостиница Черный Камень\",\r\n\"hot_phone\":\"+7(999)231-97-64\",\r\n\"email\":\"black_rock@gmail.com\",\r\n\"address\":\"Воронежская обл., пр.Лепестков, д.42\",\r\n\"photo\":\"\",\r\n\"description\":\"Добро пожаловать в Черный Камень!\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/hotel/new",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"hotel",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/search",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/hotel/4",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"hotel",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete hotel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yOvG7smseyJG3Xfz1p71urne38fH_wM6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/deleteHotel/4",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"deleteHotel",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8yCNJcpWQxFYDAUvLx4cnCMGTh0KMXj_",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"hotel_id\":\"4\",\r\n\"date_here\":\"2022-09-12\",\r\n\"date_away\":\"2022-09-22\",\r\n\"time_arriv\":\"15:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/booking",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://k-pivovarova.xn--80ahdri7a.site/api/deleteBook/7",
+					"protocol": "http",
+					"host": [
+						"k-pivovarova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"deleteBook",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
